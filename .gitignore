@@ -1,3 +1,4 @@
 # Project exclude paths
 /ch1/front/node_modules/
 .idea
+/ch1/front/.nuxt/

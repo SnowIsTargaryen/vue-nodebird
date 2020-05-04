@@ -46,10 +46,8 @@
         },
         methods:{
             onSubmitForm(){
-                if(this.$refs.form.validate()){
-                    alert('회원가입 시도')
-                }else{
-                    alert('폼이 유효하지 않습니다.');
+                if(this.$refs.form.validate()) {
+                  this.$store.dispach('users/signUp')
                 }
                 console.log(this.valid);
             }
