@@ -47,7 +47,18 @@
         methods:{
             onSubmitForm(){
                 if(this.$refs.form.validate()) {
-                  this.$store.dispach('users/signUp')
+                  this.$store.dispatch('users/signUp',{
+                    nickname: this.nickname,
+                    email: this.email,
+                  })
+                    .then(() => {
+                      this.$router.push({
+                        path: '/',
+                      });
+                    })
+                    .catch((err) => {
+                      alert('회원가입 실패', err)
+                    })
                 }
                 console.log(this.valid);
             }

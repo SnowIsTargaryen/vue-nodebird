@@ -4,7 +4,7 @@
       <v-toolbar dark color="green">
         <v-toolbar-title>
           <v-btn nuxt-link to="/">NodeBird</v-btn>
-<!--          <nuxt-link to="/">NodeBird</nuxt-link>-->
+          <!--          <nuxt-link to="/">NodeBird</nuxt-link>-->
         </v-toolbar-title>
         <v-spacer />
         <v-toolbar-items>
@@ -18,8 +18,7 @@
         </v-toolbar-items>
       </v-toolbar>
     </nav>
-    <div>{{name}}</div>
-    <v-btn @click="onChangeName"> byebye</v-btn>
+
     <v-row no-gutters>
       <v-col cols="12" md="4">
         <login-form />
@@ -40,14 +39,10 @@
             LoginForm,
         },
       computed:{
-          name(){
-            return this.$store.state.posts.name;
-          }
+
       },
       methods:{
-          onChangeName(){
-            this.$store.commit('post/BYE');
-          }
+
       }
     };
 </script>
