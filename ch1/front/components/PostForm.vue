@@ -44,6 +44,34 @@
             this.successMessages = '';
             }
           },
+        // async onSubmitForm(){
+        //   if(this.$refs.form.validate()){
+        //     try{
+        //       const post = await this.$store.dispatch('posts/add',{
+        //         content: this.content,
+        //         User:{
+        //           nickname: this.me.nickname,
+        //         },
+        //         Comments:[],
+        //         Image:[],
+        //         id:Date.now(),
+        //         createAd: Date.now()
+        //       });
+        //       console.log('post',post);
+        //
+        //       const results = await (()=>{
+        //         this.content = '';
+        //         this.hideDetails = false;
+        //         this.success = true;
+        //         this.successMessages = "게시글 등록 성공"
+        //       })
+        //       console.log(results)
+        //     }catch (e) {
+        //       console.error(e)
+        //     }
+        //
+        //   }
+        // },
         onSubmitForm(){
           if(this.$refs.form.validate()){
             this.$store.dispatch('posts/add',{
